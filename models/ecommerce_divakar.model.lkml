@@ -9,6 +9,10 @@ datagroup: ecommerce_divakar_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+datagroup: user_pdt_datagroup {
+  sql_trigger: select count(*) from orders ;;
+}
+
 persist_with: ecommerce_divakar_default_datagroup
 
 explore: account {}
@@ -262,3 +266,5 @@ explore: xss_test_7 {}
 explore: xss_test_8 {}
 
 explore: xss_test_9 {}
+
+explore: user_derivedTable {}
