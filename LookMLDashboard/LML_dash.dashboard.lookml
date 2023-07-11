@@ -1,12 +1,11 @@
-- dashboard: LookMLDashboard_573041
-  title: LookMLDashboard_573041
+- dashboard: LML_dash
+  title: LML_dash
   layout: newspaper
   preferred_viewer: dashboards-next
-  description: ''
-  preferred_slug: DENyBr21tCPLNUYI2gACnx
+  preferred_slug: MDuPUIwZqh7mzLuTVf1Dgf
   elements:
-  - title: UDD_Dashboard_573041
-    name: UDD_Dashboard_573041
+  - title: UDD_0607
+    name: UDD_0607
     model: ecommerce_divakar
     explore: order_items
     type: looker_column
@@ -16,6 +15,7 @@
     filters: {}
     sorts: [products.count desc 0, orders.created_year]
     limit: 500
+    column_limit: 50
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
@@ -45,8 +45,6 @@
     totals_color: "#808080"
     x_axis_zoom: true
     y_axis_zoom: true
-    series_types:
-      2019 - products.count: line
     hidden_pivots: {}
     defaults_version: 1
     listen:
