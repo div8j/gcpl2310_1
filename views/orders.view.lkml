@@ -32,13 +32,13 @@ view: orders {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
-    html:
-    {% if value == 'cancelled' %}
-    <p style="font-size:60%;">{{ rendered_value }}</p>
-    {% else %}
-    <p style="font-size:100%;">{{ rendered_value }}</p>
-    {% endif %}
-    ;;
+    #html:
+    #{% if value == 'cancelled' %}
+    #<p style="font-size:60%;">{{ rendered_value }}</p>
+    #{% else %}
+    #<p style="font-size:100%;">{{ rendered_value }}</p>
+    #{% endif %}
+    #;;
   }
   dimension: user_id {
     type: number
@@ -48,13 +48,13 @@ view: orders {
   measure: count {
     type: count
     drill_fields: [detail*]
-    html:
-    {% if status._value == 'cancelled' %}
-    <p style="font-size:60%;">{{ rendered_value }}</p>
-    {% else %}
-    <p style="font-size:100%;">{{ rendered_value }}</p>
-    {% endif %}
-    ;;
+    #html:
+    #{% if status._value == 'cancelled' %}
+    #<p style="font-size:60%;">{{ rendered_value }}</p>
+    #{% else %}
+    #<p style="font-size:100%;">{{ rendered_value }}</p>
+    #{% endif %}
+    #;;
   }
 
   # ----- Sets of fields for drilling ------
