@@ -24,7 +24,9 @@ view: inventory_items {
   dimension_group: sold {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
-    sql: ${TABLE}.sold_at ;;
+    convert_tz: yes
+    sql: convert_tz(${TABLE}.sold_at,'+00:00','+05:30') ;;
+
   }
   measure: count {
     type: count

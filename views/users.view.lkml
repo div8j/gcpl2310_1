@@ -61,6 +61,29 @@ view: users {
     drill_fields: [detail*]
   }
 
+  measure: count_html {
+    type: count
+    drill_fields: [detail*]
+    html:
+    {% if state._value == 'Michigan' %}
+    <p style="color: black; background-color: lightgreen; border: solid 2px lightgreen; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% elsif state._value == 'Texas' %}
+    <p style="color: black; background-color: red; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% else %}
+    <p style="color: black; background-color: yellow; font-size:100%; text-align:center">{{ rendered_value }}</p>
+    {% endif %}
+    ;;
+  }
+
+  dimension: theTest {
+    link: {
+      label: "Test label"
+      url: "https://gcpl2310.cloud.looker.com/dashboards/177?State={{ _filters['users.state'] | url_encode }}"
+    }
+    sql: "Test Label" ;;
+  }
+
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
