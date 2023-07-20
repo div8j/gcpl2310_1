@@ -269,3 +269,5 @@ explore: xss_test_8 {}
 explore: xss_test_9 {}
 
 explore: user_derivedTable {}
+
+explore: pagination_users {}
