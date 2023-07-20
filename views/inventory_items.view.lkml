@@ -25,8 +25,7 @@ view: inventory_items {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     convert_tz: yes
-    sql: ${TABLE}.sold_at ;;
-    #sql: convert_tz(${TABLE}.sold_at,'+00:00','+05:30') ;;
+    sql: convert_tz(${TABLE}.sold_at,'+00:00','+05:30') ;;
 
   }
   measure: count {
