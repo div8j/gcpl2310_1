@@ -11,7 +11,7 @@ view: pagination_users{
   }
 
   parameter: number_per_page {
-    default_value: "50"
+    default_value: "5000"
     type: number
   }
 
