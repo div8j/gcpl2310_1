@@ -270,4 +270,4 @@ explore: xss_test_9 {}
 
 explore: user_derivedTable {}
 
-explore: pagination_users {}
+explore: pagination_orders {}
