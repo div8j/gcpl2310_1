@@ -19,6 +19,7 @@ view: pagination_orders{
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
+    drill_fields: [detail*]
   }
 
   dimension_group: created {
