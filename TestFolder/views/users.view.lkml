@@ -11,6 +11,11 @@ view: users {
     type: number
     sql: ${TABLE}.age ;;
   }
+  dimension: age_tier {
+    type: tier
+    tiers: [15,30,45,60,75,90,105,120]
+    sql: ${age} ;;
+  }
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
@@ -52,6 +57,10 @@ view: users {
     type: string
     sql: ${TABLE}.state ;;
   }
+  dimension: state1 {
+    type: string
+    sql: concat(${TABLE}.state," ") ;;
+  }
   dimension: zip {
     type: zipcode
     sql: ${TABLE}.zip ;;
@@ -74,15 +83,6 @@ view: users {
     {% endif %}
     ;;
   }
-
-  dimension: theTest {
-    link: {
-      label: "Test label"
-      url: "https://gcpl2310.cloud.looker.com/dashboards/177?State={{ _filters['users.state'] | url_encode }}"
-    }
-    sql: "Test Label" ;;
-  }
-
 
   # ----- Sets of fields for drilling ------
   set: detail {

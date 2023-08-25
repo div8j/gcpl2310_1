@@ -1,9 +1,9 @@
 connection: "thelook"
 
 # include all the views
-include: "/views/**/*.view.lkml"
-include: "/Explore/**/*.explore.lkml"
-include: "/LookMLDashboard/**/*.dashboard.lookml"
+include: "/TestFolder/views/**/*.view.lkml"
+#include: "/Explore/**/*.explore.lkml"
+#include: "/LookMLDashboard/**/*.dashboard.lookml"
 
 datagroup: ecommerce_divakar_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -271,3 +271,5 @@ explore: xss_test_9 {}
 explore: user_derivedTable {}
 
 explore: pagination_orders {}
+
+explore:OrderItems_extended {}
